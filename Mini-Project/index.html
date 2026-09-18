@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruang Seni</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Temukan Kreativitasmu Lewat Seni</h1>
+                <button id="menu-toggle"
+                        class="menu-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="main-nav">
+                    Menu
+                </button>
+            </div>
+            <nav id="main-nav">
+                <a href="#materi" class="nav-link">Materi</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+                <button id="theme-toggle"
+                        class="nav-button"
+                        type="button"
+                        aria-pressed="false">
+                    Tema Gelap
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Selamat Datang Di Ruang Seni!</h2>
+                <p>
+                    Belajar menggambar dari dasar hingga membuat ilustrasi
+                    dengan materi yang sederhana, terstruktur, dan cocok untuk pemula.
+                </p>
+                <a href="#materi" class="button button-belajar">
+                    Mulai belajar
+                </a>
+            </div>
+        </section>
+
+        <section id="materi" class="section">
+            <div class="container">
+                <h2>Materi Belajar</h2>
+                <p>Pilih materi yang ingin kamu pelajari.</p>
+
+                <div class="filter-group">
+                    <label for="filter-materi">Filter materi:</label>
+                    <select id="filter-materi">
+                        <option value="semua">Semua</option>
+                        <option value="dasar">Dasar</option>
+                        <option value="lanjutan">Lanjutan</option>
+                    </select>
+                </div>
+
+                <div id="daftar-materi" class="card-list"></div>
+                <p id="status-materi" class="status" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section id="tentang" class="section">
+            <div class="container">
+                <h2>Tentang Ruang Seni</h2>
+
+                <div class="card">
+                    <p>
+                        Ruang Seni merupakan website yang membantu pemula
+                        dalam belajar menggambar secara bertahap.
+                    </p>
+
+                    <ul>
+                        <li>Sketsa</li>
+                        <li>Pewarnaan</li>
+                        <li>Shadowing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>FAQ</h2>
+
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            Apakah Ruang Seni cocok untuk pemula?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                Ya. Materi disusun dari dasar sehingga
+                                cocok untuk orang yang baru mulai belajar menggambar.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            Apa saja yang bisa dipelajari?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                Kamu dapat mempelajari sketsa, pewarnaan,
+                                shadowing, dan dasar ilustrasi.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            Apakah materi dapat dipelajari secara bertahap?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                Ya. Kamu dapat memulai dari materi dasar
+                                kemudian melanjutkan ke materi berikutnya.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="section">
+            <div class="container">
+                <h2>Kontak</h2>
+
+                <form id="form-kontak" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input id="nama"
+                               name="nama"
+                               type="text"
+                               required
+                               minlength="3">
+                        <p id="error-nama" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email"
+                               name="email"
+                               type="email"
+                               required>
+                        <p id="error-email" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan"
+                                  name="pesan"
+                                  rows="5"
+                                  required
+                                  minlength="10"></textarea>
+                        <p id="error-pesan" class="error"></p>
+                    </div>
+
+                    <button type="submit" class="button button-email">
+                        Kirim pesan
+                    </button>
+
+                    <p id="pesan-berhasil"
+                       class="success"
+                       aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top"
+            class="back-to-top"
+            type="button"
+            hidden>
+        ↑ Kembali ke atas
+    </button>
+
+    <footer>
+        <div>2026 - Ruang Seni</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #146466;
+    --secondary-color: #c92f1c;
+    --accent-color: #5aaba9;
+    --background-color: #e2e2c4;
+    --card-color: white;
+    --text-color: #146466;
+    --error-color: #c92f1c;
+    --success-color: #146466;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+body.dark {
+    --background-color: #102f30;
+    --card-color: #183f40;
+    --text-color: #e2e2c4;
+}
+.container {
+    width: min(92%, 900px);
+    margin-inline: auto;
+}
+header {
+    background-color: var(--primary-color);
+    color: white;
+}
+.header-content {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+.nav-link,
+.nav-button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: white;
+    background-color: var(--primary-color);
+    border: 1px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+}
+.nav-link:hover,
+.nav-button:hover {
+    background-color: var(--secondary-color);
+}
+.menu-toggle {
+    display: none;
+    padding: 10px 16px;
+    color: white;
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+.nav-link:focus-visible,
+.nav-button:focus-visible,
+.menu-toggle:focus-visible,
+.button:focus-visible,
+.faq-question:focus-visible,
+.back-to-top:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+.hero {
+    padding: 50px 0;
+}
+.hero h2,
+.section h2 {
+    color: var(--primary-color);
+}
+body.dark .hero h2,
+body.dark .section h2 {
+    color: var(--accent-color);
+}
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.hero p {
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.section {
+    padding: 40px 0;
+}
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+.card {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 14px;
+    border-top: 6px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(20, 100, 102, 0.15);
+}
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+body.dark .card h3 {
+    color: var(--accent-color);
+}
+.card p {
+    line-height: 1.6;
+}
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+    font: inherit;
+}
+.button-belajar {
+    background-color: var(--secondary-color);
+}
+.button-belajar:hover {
+    background-color: var(--primary-color);
+}
+.button-email {
+    background-color: var(--primary-color);
+}
+.button-email:hover {
+    background-color: var(--secondary-color);
+}
+.filter-group {
+    margin-top: 20px;
+}
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.filter-group select {
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font: inherit;
+}
+.status {
+    margin-top: 16px;
+    font-weight: bold;
+}
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.faq-item {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    overflow: hidden;
+    border-left: 5px solid var(--secondary-color);
+}
+.faq-question {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    color: var(--text-color);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+.faq-answer {
+    padding: 0 16px 16px;
+    line-height: 1.6;
+}
+.contact-form {
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(20, 100, 102, 0.15);
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font: inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+.error {
+    min-height: 20px;
+    margin: 5px 0 0;
+    color: var(--error-color);
+    font-size: 14px;
+}
+.success {
+    min-height: 20px;
+    margin-top: 12px;
+    color: var(--success-color);
+    font-weight: bold;
+}
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 12px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+@media (max-width: 767px) {
+    .header-content {
+        padding: 20px 0;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 20px;
+    }
+    nav.is-open {
+        display: flex;
+    }
+    .nav-link,
+    .nav-button {
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    .card-list {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .card-list .card {
+        flex: 1;
+    }
+}

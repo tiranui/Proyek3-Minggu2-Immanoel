@@ -1,0 +1,16 @@
+const nama = 'Rani';
+const nilaiTeks = '80';
+const nilaiAngka = 80;
+const aktif = true;
+const hasil = nilaiTeks + 5;
+console.log(typeof nama);
+console.log(typeof nilaiTeks);
+console.log(typeof nilaiAngka);
+console.log(typeof aktif);
+console.log(typeof hasil);
+console.log(Number(nilaiTeks) + 5);
+console.log(nilaiTeks == nilaiAngka);
+console.log(nilaiTeks === nilaiAngka);
+console.log(typeof Number(nilaiTeks));
+console.log(typeof Number(nilaiAngka));
+console.log(typeof Number(nama));

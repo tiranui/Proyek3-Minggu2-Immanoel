@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Profile Card</h1>
+
+        <p id="status" aria-live="polite">
+            Memuat profil...
+        </p>
+
+        <button id="coba-lagi" hidden>Coba Lagi</button>
+        <button id="tema">Ganti Tema</button>
+
+        <section class="card">
+
+            <h2 id="nama">-</h2>
+            <p id="jabatan">-</p>
+
+            <button
+                id="detail"
+                aria-expanded="false">
+                Tampilkan Detail
+            </button>
+
+            <div id="detail-profil" hidden>
+                <p id="deskripsi">-</p>
+                <p id="email">-</p>
+            </div>
+
+            <h3>Keterampilan</h3>
+
+            <form id="form-keterampilan">
+                <input
+                    type="text"
+                    id="keterampilan"
+                    placeholder="Tambah keterampilan">
+
+                <button type="submit">
+                    Tambah
+                </button>
+
+                <p id="error-keterampilan"></p>
+            </form>
+
+            <ul id="daftar-keterampilan"></ul>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

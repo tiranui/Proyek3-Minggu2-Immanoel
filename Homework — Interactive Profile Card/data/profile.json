@@ -1,0 +1,11 @@
+{
+  "nama": "Immanoel",
+  "jabatan": "Mahasiswa Teknik Informatika",
+  "deskripsi": "Mahasiswa yang sedang belajar pemrograman dan pengembangan web.",
+  "email": "immanoel@example.com",
+  "keterampilan": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ]
+}
